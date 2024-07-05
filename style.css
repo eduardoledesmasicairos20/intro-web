@@ -1,0 +1,199 @@
+/* cabecera inicio */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    list-style: none;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #25426d, #3a4c66);
+  }
+header{
+    display: flex;
+   /*  background-color: yellow; */
+    justify-content: space-around;
+    align-items: center;
+    background-color: #193763;
+}
+
+.cabeera{
+    /* background-color: aqua; */
+    display: inline-flex;
+}
+.logotipo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cabeera>img{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    border-radius: 30px;
+}
+
+ul{
+    display: flex;
+    padding: 5px;
+}
+li{
+    margin: 0 10px 0 10px;
+}
+nav ul li a {
+    color: #05ed946d; /* Agrega un color azul al texto de los enlaces */
+  }
+input{
+height: 25px;
+border-radius: 10px;
+}
+
+/* cabecera fin */
+
+/* contenido */
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 25px;
+    max-width: 1340px;
+    margin: auto;
+}
+
+/* editando cartas */
+
+.teacher>img{
+    border-radius: 20px;
+}
+.card{
+    background-color: linear-gradient(to bottom, #1e3860, #375278);
+    /* width: 350px; */
+    margin: 50px auto 0 auto;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px 3px black; 
+}
+.card-screem{
+    position: relative;
+    background-color: yellow;
+    border-radius: 15px;
+}
+
+.card-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #23232373;
+    border-radius: 15px;
+    top: 0;
+    padding: 10px;
+    opacity: 0;
+    transition-duration: .3s;
+}
+
+.buttoms-up{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.buttoms-up>a{
+    color: whitesmoke;
+}
+.buttoms-up>button{
+    border-radius: 10px;
+    background-color: #f3ce4e;
+    padding: 5px;
+}
+
+.bttons-down{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+}
+
+.card-screem>img{
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+}
+
+.card-screem:hover .card-buttons{
+    opacity: 1;
+}
+
+p.tag{
+    background-color:hsl(46.63deg,88.3%,63.14%) ;
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.card>h1{
+    font-size: 1.4em;
+    margin: 10px 0;
+
+}
+p.text-description{
+    color: gray;
+    line-height: 22px;
+    margin-bottom: 20px;
+
+}
+
+.teacher img{
+width: 30px;
+vertical-align: middle;
+}
+.teacher p{
+display: inline-block;
+font-weight: bold;
+font-size: 0.8em;
+margin-left: 5px;
+}
+
+.tag-container>button{
+    background-color: #f3ce4e;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.tag-container>button a{
+  color: black;
+}
+
+
+
+/* brake pint tablet */
+
+
+@media screen and (max-width: 2000px){
+    .container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* brake pint mobile */
+@media screen and (max-width: 1000px){
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* brake pint mobile */
+@media screen and (max-width: 750px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
